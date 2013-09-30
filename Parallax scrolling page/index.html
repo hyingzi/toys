@@ -1,51 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Parallax scrolling page</title>
-	<style type="text/css">
-		*{
-			margin: 0;
-			padding: 0;
-		}
+  <meta charset="UTF-8">
+  <title>Parallax scrolling page</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
 
-		.story{
-			width: 100%;
-			margin: 0 auto;
-			max-width: 1920px;
-			background: no-repeat center center fixed #333;
-		}
-	</style>
+    .story{
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1920px;
+      background: no-repeat center center fixed #333;
+    }
+  </style>
 </head>
 <body>
-	<div id="main">
-		<div class="story" data-src="images/2.jpg"></div>
-		<div class="story" data-src="images/1.jpg"></div>
-		<div class="story" data-src="images/3.jpg"></div>
-		<div class="story" data-src="images/4.jpg"></div>
-		<div class="story" data-src="images/5.jpg"></div>
-		<div class="story" data-src="images/6.jpg"></div>
-		<div class="story" data-src="images/7.jpg"></div>
-		<div class="story" data-src="images/8.jpg"></div>
-	</div>
-	<script src="http://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://cdn.staticfile.org/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
-	<script src="jquery.imageloader.js"></script>
-	<script>
-			var $storys = $('.story');
+  <div id="main">
+    <div class="story" data-src="images/1.jpg"></div>
+    <div class="story" data-src="images/2.jpg"></div>
+    <div class="story" data-src="images/3.jpg"></div>
+    <div class="story" data-src="images/4.jpg"></div>
+    <div class="story" data-src="images/5.jpg"></div>
+    <div class="story" data-src="images/6.jpg"></div>
+    <div class="story" data-src="images/7.jpg"></div>
+    <div class="story" data-src="images/8.jpg"></div>
+  </div>
+  <script src="http://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://cdn.staticfile.org/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
+  <script src="jquery.imageloader.js"></script>
+  <script>
+    var $storys = $('.story');
 
-			$(window).resize(function(){
-				$storys.css('height', $(window).height());
-			}).trigger('resize');
+    $(window).resize(function(){
+      $storys.css('height', $(window).height());
+    }).trigger('resize');
 
-			$storys.imageloader({
-				background : true,
-				callback : function(element){
-					$(element).fadeIn();
-				}
-			});
+    $storys.imageloader({
+      background : true,
+      callback : function(element){
+        $(element).fadeIn();
+      }
+    });
 
-			$('html').niceScroll();
-	</script>
+    $('html').niceScroll();
+  </script>
 </body>
 </html>
