@@ -1,0 +1,27 @@
+{
+  "name": "mage",
+  "version": "0.0.4",
+  "description": "Browser autoReload",
+  "main": "lib/F5.js",
+  "bin": {
+    "f5": "./bin/F5.js"
+  },
+  "dependencies": {
+    "mime": "~1.2.9",
+    "watch-tree-maintained": "~0.1.2",
+    "nopt": "~2.0.0",
+    "socket.io": "~0.9.14"
+  },
+  "engines" : {
+    "node" : ">=0.10.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reload"
+  ],
+  "author": "hanfeizi",
+  "license": "BSD",
+  "readme" : "Browser reload"
+}
